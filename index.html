@@ -38,7 +38,8 @@
     </div>
     <div class="info">
       Test page for the chord parser & namer methods of the
-      <a href="https://www.github.com/AtActionPark/Solfege">Solfege</a> library. This is a work in progress and published for debugging. Please let me know if you find any issues.
+      <a href="https://www.github.com/AtActionPark/Pianissimo">Pianissimo</a> library. This is a work in progress and published for debugging. Please let me know if you find any
+      issues.
     </div>
   </div>
 
@@ -47,7 +48,7 @@
     //Parse the name and return a chord object
     const nameToNotes = function (name) {
       //Create a chord and let the parser try to work its magic
-      let chord = Solfege.chord(name)
+      let chord = pianissimo.chord(name)
       //grab the notes and intervals
       let notes = chord.getNotesName()
       let intervals = chord.getIntervals()
@@ -72,7 +73,7 @@
     const notesToName = function (notes) {
       let n = notes.split(" ")
       //build a chord with given notes. The chord constructor will generate a list of possible names
-      let chord = Solfege.chord(n)
+      let chord = pianissimo.chord(n)
       //Find the shortest name amongst the list of all possible names
       let best = chord .findBestName()
       //Display the result
